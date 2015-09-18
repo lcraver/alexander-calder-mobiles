@@ -12,7 +12,7 @@ public class AddForce : MonoBehaviour {
 	void Update () {
         if (Input.GetKey(KeyCode.Space))
         {
-            this.GetComponent<Rigidbody>().AddForce(new Vector3(10,10,10));
+            this.GetComponent<Rigidbody>().AddTorque(new Vector3(0, 10, 0));
         }
 	}
 }

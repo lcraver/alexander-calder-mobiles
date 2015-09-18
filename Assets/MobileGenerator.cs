@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class MobileGenerator : MonoBehaviour {
 
+    public Material lineMaterial;
+
     [Header("Game Object Prefabs")]
     public GameObject[] mobileNodes = new GameObject[1];
 
@@ -14,6 +16,7 @@ public class MobileGenerator : MonoBehaviour {
     [Header("Seeds")]
     public string masterSeed;
     public int generatedSeed;
+    public int levels;
 
     public void SetSeedFromMaster()
     {
@@ -56,7 +59,26 @@ public class MobileGenerator : MonoBehaviour {
 
         generatedSeed = Random.seed;
 
-        GenerateMobile();
+        DeleteChilden(mobile.transform);
+
+        GameObject parent = Instantiate(mobileNodes[Random.Range(0, mobileNodes.Length)], new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        parent.GetComponent<Rigidbody>().isKinematic = true;
+        parent.name = "parent";
+        parent.transform.SetParent(mobile.transform);
+        parent.transform.position = new Vector3(0, 20, 0);
+        
+        GenerateMobile(parent, ref mainNode);
+
+        for (int i = 0; i < mainNode.children.Count; i++)
+        {
+            Node childNode = mainNode.children[i];
+            GenerateLevel(ref childNode);
+        }
+    }
+
+    void GenerateLevel(ref Node childNode)
+    {
+        GenerateMobile(childNode.current, ref childNode);
     }
 	
     [System.Serializable]
@@ -64,84 +86,113 @@ public class MobileGenerator : MonoBehaviour {
     {
         public GameObject current;
         public List<Node> children;
+        public GameObject spinner;
+        public float weight;
+        public Vector3 distance;
     }
     public Node mainNode = new Node();
 
 	void Update () {
         masterSeed = canvas.transform.FindChild("seed-input").GetComponent<UnityEngine.UI.InputField>().text;
 
-        for (int i = 0; i < mainNode.children.Count; i++)
+        if (mainNode != null)
+        {
+            DisplayLines(mainNode);
+            for (int i = 0; i < mainNode.children.Count; i++)
+            {
+                DisplayLines(mainNode.children[i]);
+            }
+        }
+
+        /*for (int i = 0; i < mainNode.children.Count; i++)
         {
             mainNode.children[i].current.GetComponent<LineRenderer>().SetPosition(0, mainNode.children[i].current.transform.position);
+            mainNode.children[i].current.GetComponent<LineRenderer>().SetPosition(1, mainNode.current.transform.position);
 
-            for (int j = 0; j < mainNode.children[i].children.Count; j++)
+            /*for (int j = 0; j < mainNode.children[i].children.Count; j++)
             {
                 mainNode.children[i].children[j].current.GetComponent<LineRenderer>().SetPosition(0, mainNode.children[i].children[j].current.transform.position);
                 mainNode.children[i].children[j].current.GetComponent<LineRenderer>().SetPosition(1, mainNode.children[i].current.transform.position);
-            }
-        }
+            }*/
+        //}
 	}
 
-    void GenerateMobile()
+    void DisplayLines(Node parentNode)
     {
-        DeleteChilden(mobile.transform);
-
-        mainNode = new Node();
-
-        GameObject head = Instantiate(mobileNodes[Random.Range(0, mobileNodes.Length)], new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-        head.GetComponent<Rigidbody>().isKinematic = true;
-        head.name = "head";
-        head.transform.SetParent(mobile.transform);
-        head.transform.position = new Vector3(0,20,0);
-
-        mainNode.current = head;
-        mainNode.children = new List<Node>();
-
-        for (int i = 0; i < Random.Range(2, 20); i++)
+        for (int i = 0; i < parentNode.children.Count; i++)
         {
-            HingeJoint joint = head.AddComponent<HingeJoint>() as HingeJoint;
-            joint.anchor = new Vector3(0, 0.5f - i, 0);
-            joint.axis = new Vector3(0, 1, 0);
+            parentNode.children[i].current.GetComponent<LineRenderer>().SetPosition(0, parentNode.children[i].current.transform.position);
+            parentNode.children[i].current.GetComponent<LineRenderer>().SetPosition(1, parentNode.spinner.transform.position);
+        }
+    }
 
-            GameObject child = Instantiate(mobileNodes[Random.Range(0, mobileNodes.Length)], new Vector3(head.transform.position.x + Random.Range(4, 16), head.transform.position.y - i * 2, 0), Quaternion.identity) as GameObject;
+    Vector3 PolarToCartesian(Vector2 polar)
+    {
+        polar.y = Mathf.Deg2Rad * polar.y;
+        float x = polar.x * Mathf.Cos(polar.y);
+        float y = polar.x * Mathf.Sin(polar.y);
+ 
+        return new Vector2(x,y);
+    }
+
+    void GenerateMobile(GameObject parent, ref Node parentNode)
+    {
+        //parentNode = new Node();
+
+        parentNode.current = parent;
+        parentNode.children = new List<Node>();
+
+        int childrenCount = Random.Range(3,4);
+        Vector3[] childrenPositions = new Vector3[childrenCount];
+
+        float degrees = 360f / childrenCount;
+        float weight = Random.Range(1,3);
+
+        for (int i = 0; i < childrenCount; i++)
+        {
+            Debug.Log(degrees * i + "- child - " + i);
+            Vector2 coords = PolarToCartesian(new Vector2(Random.Range(4, 16), degrees * i));
+            Vector3 position = new Vector3(coords.x, Random.Range(-2, -6), coords.y);
+            childrenPositions[i] = position;
+        }
+
+        GameObject parentSpinner = Instantiate(mobileNodes[0], new Vector3(parent.transform.position.x, parent.transform.position.y - 2, parent.transform.position.z), Quaternion.identity) as GameObject;
+        parentSpinner.name = "parent-spinner";
+        parentSpinner.transform.SetParent(parent.transform);
+        parentSpinner.AddComponent<AddForce>();
+
+        parentNode.spinner = parentSpinner;
+        
+        HingeJoint hingeJoint = parentSpinner.AddComponent<HingeJoint>() as HingeJoint;
+        hingeJoint.anchor = new Vector3(0, -2, 0);
+        hingeJoint.axis = new Vector3(0, 1, 0);
+        hingeJoint.connectedBody = parent.GetComponent<Rigidbody>();
+
+
+        for (int i = 0; i < childrenCount; i++)
+        {
+            GameObject child = Instantiate(mobileNodes[Random.Range(0, mobileNodes.Length)], new Vector3(parent.transform.position.x + childrenPositions[i].x, parent.transform.position.y + childrenPositions[i].y, childrenPositions[i].z), Quaternion.identity) as GameObject;
             child.name = "child - " + i;
-            child.transform.SetParent(mobile.transform);
-            child.AddComponent<AddForce>();
-            joint.connectedBody = child.GetComponent<Rigidbody>();
+            child.transform.SetParent(parentSpinner.transform);
+            child.GetComponent<Rigidbody>().isKinematic = true;
+
+            /*FixedJoint joint = child.AddComponent<FixedJoint>() as FixedJoint;
+            joint.anchor = new Vector3(0, -2, 0);
+            joint.axis = new Vector3(0, 1, 0);
+            joint.connectedBody = parentSpinner.GetComponent<Rigidbody>();*/
+
             LineRenderer line = child.AddComponent<LineRenderer>();
-            line.SetColors(Color.black, Color.black);
+            line.materials[0] = lineMaterial;
+            //line.SetColors(Color.black, Color.black);
             line.SetWidth(0.2f, 0.2f);
             line.SetPosition(0, child.transform.position);
-            line.SetPosition(1, joint.anchor + head.transform.position);
+            line.SetPosition(1, parentSpinner.transform.position);
 
             Node childNode = new Node();
             childNode.children = new List<Node>();
             childNode.current = child;
 
-            mainNode.children.Add(childNode);
-
-            for (int j = 0; j < Random.Range(0, 4); j++)
-            {
-                HingeJoint joint2 = child.AddComponent<HingeJoint>() as HingeJoint;
-                joint2.anchor = new Vector3(0, 0.5f - j, 0);
-                joint2.axis = new Vector3(0, 1, 0);
-
-                GameObject child2 = Instantiate(mobileNodes[Random.Range(0, mobileNodes.Length)], new Vector3(child.transform.position.x + Random.Range(4, 10), child.transform.position.y - j * 2, 0), Quaternion.identity) as GameObject;
-                child2.name = "[" + i + "]" + "child - " + j;
-                child2.transform.SetParent(mobile.transform);
-                child2.AddComponent<AddForce>();
-                joint2.connectedBody = child2.GetComponent<Rigidbody>();
-                LineRenderer line2 = child2.AddComponent<LineRenderer>();
-                line2.SetColors(Color.black, Color.black);
-                line2.SetWidth(0.2f, 0.2f);
-                line2.SetPosition(0, child2.transform.position);
-                line2.SetPosition(1, joint2.anchor + child2.transform.position);
-
-                Node childNode2 = new Node();
-                childNode2.current = child2;
-
-                childNode.children.Add(childNode2);
-            }
+            parentNode.children.Add(childNode);
         }
     }
 
