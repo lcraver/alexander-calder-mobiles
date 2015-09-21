@@ -1,81 +1,55 @@
-Initialize engine version: 5.0.1f1 (d4dac7d23950)
+Initialize engine version: 5.0.2f1 (0b02744d4013)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 960 (ID=0x1401)
-    Vendor:   NVIDIA
-    VRAM:     3072 MB
+    Renderer: Intel(R) HD Graphics 5000 (ID=0xa26)
+    Vendor:   Intel
+    VRAM:     128 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.032 seconds
-desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+Platform assembly: C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.063 seconds
+desktop: 2160x1440 59Hz; virtual: 2160x1440 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\System.dll (this message is harmless)
-Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes. (Filename:  Line: 67)
-Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes. (Filename:  Line: 67)
-Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes. (Filename:  Line: 67)
-Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes. (Filename:  Line: 67)
-Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes. (Filename:  Line: 67)
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 761c -> priority: 1 
-  Thread -> id: 28b4 -> priority: 1 
-Defaulting Seed! (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-Generated Seed - 191741319 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-Generated Seed - 118012 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-Generated Seed - 8310 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-0- child - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-120- child - 1 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-240- child - 2 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Platform assembly: C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\System.dll (this message is harmless)
+Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes.
+ 
+(Filename:  Line: 67)
+
+Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes.
+ 
+(Filename:  Line: 67)
+
+Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes.
+ 
+(Filename:  Line: 67)
+
+Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes.
+ 
+(Filename:  Line: 67)
+
+Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes.
+ 
+(Filename:  Line: 67)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2bb8 -> priority: 1 
+Generated Seed - 118012
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Generated Seed - 8310
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Generated Seed - 18390
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+

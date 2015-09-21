@@ -12,11 +12,23 @@ public class MobileGenerator : MonoBehaviour {
     [Header("Game Object References")]
     public GameObject canvas;
     public GameObject mobile;
+    
+    [System.Serializable]
+    public class Colors{
+        public List<Color> color = new List<Color>();
+        public bool used = false;
+    }
+    [Header("Colors")]
+    public List<Colors> colors = new List<Colors>();
+    public int colorsUsed = 0;
+    public bool allColorsUsed(){ return (colorsUsed >= colors.Count); }
 
     [Header("Seeds")]
     public string masterSeed;
     public int generatedSeed;
     public int levels;
+    public int type;
+    public int color;
 
     public void SetSeedFromMaster()
     {
@@ -32,7 +44,7 @@ public class MobileGenerator : MonoBehaviour {
         char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 
         string seed = "";
-        foreach (char c in _seed)
+        foreach (char c in _seed.ToLower())
         {
             for (int i = 0; i < alphabet.Length; i++)
             {
@@ -59,13 +71,17 @@ public class MobileGenerator : MonoBehaviour {
 
         generatedSeed = Random.seed;
 
+        type = Random.Range(0, mobileNodes.Length);
+        color = Random.Range(0, colors.Count);
+
         DeleteChilden(mobile.transform);
 
-        GameObject parent = Instantiate(mobileNodes[Random.Range(0, mobileNodes.Length)], new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        GameObject parent = Instantiate(mobileNodes[type], new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         parent.GetComponent<Rigidbody>().isKinematic = true;
         parent.name = "parent";
         parent.transform.SetParent(mobile.transform);
         parent.transform.position = new Vector3(0, 20, 0);
+        parent.GetComponent<Renderer>().material.color = Color.black;
         
         GenerateMobile(parent, ref mainNode);
 
@@ -73,6 +89,47 @@ public class MobileGenerator : MonoBehaviour {
         {
             Node childNode = mainNode.children[i];
             GenerateLevel(ref childNode);
+        }
+
+        GenerateBottomLevel(ref mainNode);
+    }
+
+    void GenerateBottomLevel(ref Node main)
+    {
+        foreach (Node child in main.children)
+        {
+            if (child.children != null && child.children.Count > 0)
+            {
+                Node childNode = child;
+                GenerateBottomLevel(ref childNode);
+            }
+            else
+            {
+                float scale = Random.Range(1, 3);
+
+                GameObject bottomPart = Instantiate(mobileNodes[type], new Vector3(child.current.transform.position.x, child.current.transform.position.y - Random.Range(0, 4) - scale - 2, child.current.transform.position.z), Quaternion.identity) as GameObject;
+                bottomPart.name = "child-end";
+                bottomPart.transform.SetParent(child.current.transform);
+                bottomPart.GetComponent<Rigidbody>().isKinematic = true;
+
+                bottomPart.transform.localScale = new Vector3(bottomPart.transform.localScale.x + scale, bottomPart.transform.localScale.y + scale, bottomPart.transform.localScale.z + scale);
+
+                LineRenderer line = bottomPart.AddComponent<LineRenderer>();
+                line.materials[0] = lineMaterial;
+                line.SetColors(Color.black, Color.black);
+                line.SetWidth(0.1f, 0.1f);
+                line.SetPosition(0, bottomPart.transform.position);
+                line.SetPosition(1, child.current.transform.position);
+
+                int randColIndex = Random.Range(0, colors[color].color.Count);
+                bottomPart.GetComponent<Renderer>().material.color = colors[color].color[randColIndex];
+
+                Node childNode = new Node();
+                childNode.children = new List<Node>();
+                childNode.current = bottomPart;
+
+                child.children.Add(childNode);
+            }
         }
     }
 
@@ -97,32 +154,22 @@ public class MobileGenerator : MonoBehaviour {
 
         if (mainNode != null)
         {
-            DisplayLines(mainNode);
-            for (int i = 0; i < mainNode.children.Count; i++)
-            {
-                DisplayLines(mainNode.children[i]);
-            }
+            DisplayLines(ref mainNode);
         }
-
-        /*for (int i = 0; i < mainNode.children.Count; i++)
-        {
-            mainNode.children[i].current.GetComponent<LineRenderer>().SetPosition(0, mainNode.children[i].current.transform.position);
-            mainNode.children[i].current.GetComponent<LineRenderer>().SetPosition(1, mainNode.current.transform.position);
-
-            /*for (int j = 0; j < mainNode.children[i].children.Count; j++)
-            {
-                mainNode.children[i].children[j].current.GetComponent<LineRenderer>().SetPosition(0, mainNode.children[i].children[j].current.transform.position);
-                mainNode.children[i].children[j].current.GetComponent<LineRenderer>().SetPosition(1, mainNode.children[i].current.transform.position);
-            }*/
-        //}
 	}
 
-    void DisplayLines(Node parentNode)
+    void DisplayLines(ref Node parentNode)
     {
-        for (int i = 0; i < parentNode.children.Count; i++)
+        foreach (Node child in parentNode.children)
         {
-            parentNode.children[i].current.GetComponent<LineRenderer>().SetPosition(0, parentNode.children[i].current.transform.position);
-            parentNode.children[i].current.GetComponent<LineRenderer>().SetPosition(1, parentNode.spinner.transform.position);
+            child.current.GetComponent<LineRenderer>().SetPosition(0, child.current.transform.position);
+            if(parentNode.spinner)
+                child.current.GetComponent<LineRenderer>().SetPosition(1, parentNode.spinner.transform.position);
+            else
+                child.current.GetComponent<LineRenderer>().SetPosition(1, parentNode.current.transform.position);
+
+            Node childNode = child;
+            DisplayLines(ref childNode);
         }
     }
 
@@ -142,15 +189,13 @@ public class MobileGenerator : MonoBehaviour {
         parentNode.current = parent;
         parentNode.children = new List<Node>();
 
-        int childrenCount = Random.Range(3,4);
+        int childrenCount = Random.Range(2,5);
         Vector3[] childrenPositions = new Vector3[childrenCount];
 
         float degrees = 360f / childrenCount;
-        float weight = Random.Range(1,3);
 
         for (int i = 0; i < childrenCount; i++)
         {
-            Debug.Log(degrees * i + "- child - " + i);
             Vector2 coords = PolarToCartesian(new Vector2(Random.Range(4, 16), degrees * i));
             Vector3 position = new Vector3(coords.x, Random.Range(-2, -6), coords.y);
             childrenPositions[i] = position;
@@ -168,10 +213,13 @@ public class MobileGenerator : MonoBehaviour {
         hingeJoint.axis = new Vector3(0, 1, 0);
         hingeJoint.connectedBody = parent.GetComponent<Rigidbody>();
 
+        int randColIndexSpinner = Random.Range(0, colors[color].color.Count);
+        parentSpinner.GetComponent<Renderer>().material.color = colors[color].color[randColIndexSpinner];
+
 
         for (int i = 0; i < childrenCount; i++)
         {
-            GameObject child = Instantiate(mobileNodes[Random.Range(0, mobileNodes.Length)], new Vector3(parent.transform.position.x + childrenPositions[i].x, parent.transform.position.y + childrenPositions[i].y, childrenPositions[i].z), Quaternion.identity) as GameObject;
+            GameObject child = Instantiate(mobileNodes[type], new Vector3(parentSpinner.transform.position.x + childrenPositions[i].x, parentSpinner.transform.position.y + childrenPositions[i].y, parentSpinner.transform.position.z + childrenPositions[i].z), Quaternion.identity) as GameObject;
             child.name = "child - " + i;
             child.transform.SetParent(parentSpinner.transform);
             child.GetComponent<Rigidbody>().isKinematic = true;
@@ -183,10 +231,13 @@ public class MobileGenerator : MonoBehaviour {
 
             LineRenderer line = child.AddComponent<LineRenderer>();
             line.materials[0] = lineMaterial;
-            //line.SetColors(Color.black, Color.black);
-            line.SetWidth(0.2f, 0.2f);
+            line.SetColors(Color.black, Color.black);
+            line.SetWidth(0.1f, 0.1f);
             line.SetPosition(0, child.transform.position);
             line.SetPosition(1, parentSpinner.transform.position);
+
+            int randColIndex = Random.Range(0, colors[color].color.Count);
+            child.GetComponent<Renderer>().material.color = colors[color].color[randColIndex];
 
             Node childNode = new Node();
             childNode.children = new List<Node>();

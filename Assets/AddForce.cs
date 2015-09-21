@@ -10,9 +10,9 @@ public class AddForce : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            this.GetComponent<Rigidbody>().AddTorque(new Vector3(0, 10, 0));
+            this.GetComponent<Rigidbody>().AddTorque(new Vector3(0, 0.1f, 0));
         }
 	}
 }
