@@ -90,7 +90,7 @@ public class MobileGenerator : MonoBehaviour {
         parent.GetComponent<Rigidbody>().isKinematic = true;
         parent.name = "parent";
         parent.transform.SetParent(mobile.transform);
-        parent.transform.position = new Vector3(0, 20, 0);
+        parent.transform.position = new Vector3(0, 14, 0);
         parent.GetComponent<Renderer>().material.color = Color.black;
         
         GenerateMobile(parent, ref mainNode);
@@ -172,6 +172,11 @@ public class MobileGenerator : MonoBehaviour {
         if (mainNode != null)
         {
             DisplayLines(ref mainNode);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            LSFunctions.Screenshot.TakeScreenshot();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
