@@ -11,6 +11,7 @@ public class MobileGenerator : MonoBehaviour {
     public GameObject[] mobileNodes = new GameObject[1];
 
     [Header("Game Object References")]
+    public GameObject camera;
     public GameObject canvas;
     public GameObject seedInput;
     public GameObject seedButton;
@@ -104,6 +105,8 @@ public class MobileGenerator : MonoBehaviour {
         }
 
         GenerateBottomLevel(ref mainNode);
+
+        camera.transform.position = new Vector3(Random.Range(-16, 16), Random.Range(-16, 16), -75 + Random.Range(-24, 48));
     }
 
     void GenerateBottomLevel(ref Node main)
@@ -167,6 +170,10 @@ public class MobileGenerator : MonoBehaviour {
     public Node mainNode = new Node();
 
 	void Update () {
+
+        if(mobile != null)
+            camera.transform.LookAt(mobile.transform.position);
+
         masterSeed = seedInput.GetComponent<UnityEngine.UI.InputField>().text;
 
         canvas.transform.FindChild("current-seed").GetComponent<Text>().text = currentSeed;
