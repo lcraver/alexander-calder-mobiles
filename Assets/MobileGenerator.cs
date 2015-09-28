@@ -12,6 +12,8 @@ public class MobileGenerator : MonoBehaviour {
 
     [Header("Game Object References")]
     public GameObject canvas;
+    public GameObject seedInput;
+    public GameObject seedButton;
     public GameObject mobile;
     
     [System.Serializable]
@@ -165,13 +167,27 @@ public class MobileGenerator : MonoBehaviour {
     public Node mainNode = new Node();
 
 	void Update () {
-        masterSeed = canvas.transform.FindChild("seed-input").GetComponent<UnityEngine.UI.InputField>().text;
+        masterSeed = seedInput.GetComponent<UnityEngine.UI.InputField>().text;
 
         canvas.transform.FindChild("current-seed").GetComponent<Text>().text = currentSeed;
 
         if (mainNode != null)
         {
             DisplayLines(ref mainNode);
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            if(seedInput.activeSelf)
+            {
+                seedInput.SetActive(false);
+                seedButton.SetActive(false);
+            }
+            else
+            {
+                seedInput.SetActive(true);
+                seedButton.SetActive(true);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.P))
