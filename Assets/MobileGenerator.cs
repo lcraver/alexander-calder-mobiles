@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 public class MobileGenerator : MonoBehaviour {
 
+    public bool holdingCtrl = false;
+
     public Material lineMaterial;
 
     [Header("Game Object Prefabs")]
@@ -50,34 +52,11 @@ public class MobileGenerator : MonoBehaviour {
     public void SetSeed(string _seed)
     {
         currentSeed = _seed;
-        char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+        
+        int endSeed = _seed.GetHashCode();
 
-        string seed = "";
-        foreach (char c in _seed.ToLower())
-        {
-            for (int i = 0; i < alphabet.Length; i++)
-            {
-                if (c == alphabet[i])
-                {
-                    seed += i.ToString();
-                }
-            }
-        }
-
-        int endSeed;
-        bool ok = int.TryParse(seed, out endSeed);
-
-        if (!ok)
-        {
-            currentSeed = "abcdef";
-            Random.seed = 012345;
-            Debug.LogWarning("Defaulting Seed!");
-        }
-        else
-        {
-            Random.seed = endSeed;
-            Debug.Log("Generated Seed - " + endSeed);
-        }
+        Random.seed = endSeed;
+        Debug.Log("Generated Seed - " + endSeed);
 
         generatedSeed = Random.seed;
 
@@ -171,6 +150,8 @@ public class MobileGenerator : MonoBehaviour {
 
 	void Update () {
 
+        holdingCtrl = (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl) || Input.GetKey(KeyCode.LeftCommand) || Input.GetKey(KeyCode.RightCommand));
+
         if(mobile != null)
             camera.transform.LookAt(mobile.transform.position);
 
@@ -183,7 +164,7 @@ public class MobileGenerator : MonoBehaviour {
             DisplayLines(ref mainNode);
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H) && holdingCtrl)
         {
             if(seedInput.activeSelf)
             {
@@ -197,12 +178,12 @@ public class MobileGenerator : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) && holdingCtrl)
         {
             LSFunctions.Screenshot.TakeScreenshot();
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && holdingCtrl)
         {
             char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 

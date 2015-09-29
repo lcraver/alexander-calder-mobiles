@@ -1,249 +1,137 @@
-Initialize engine version: 5.0.2f1 (0b02744d4013)
+Initialize engine version: 5.0.1f1 (d4dac7d23950)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: Intel(R) HD Graphics 5000 (ID=0xa26)
-    Vendor:   Intel
-    VRAM:     128 MB
+    Renderer: NVIDIA GeForce GTX 960 (ID=0x1401)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.097 seconds
+Platform assembly: C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.078 seconds
 <RI> Initializing input.
 <RI> Input initialized.
-desktop: 2160x1440 59Hz; virtual: 2160x1440 at 0,0
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initialized touch support.
-Platform assembly: C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\limestudios\Documents\Unity Docs\alexander-calder-mobiles\Builds\test_Data\Managed\System.dll (this message is harmless)
-Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes.
- 
-(Filename:  Line: 67)
-
-Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes.
- 
-(Filename:  Line: 67)
-
-Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes.
- 
-(Filename:  Line: 67)
-
-Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes.
- 
-(Filename:  Line: 67)
-
-Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes.
- 
-(Filename:  Line: 67)
-
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 3af0 -> priority: 1 
-Font size and style overrides are only supported for dynamic fonts.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Font size and style overrides are only supported for dynamic fonts.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Font size and style overrides are only supported for dynamic fonts.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-ojtkyv
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Defaulting Seed!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Font size and style overrides are only supported for dynamic fonts.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Generated Seed - 11801230
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-ejusvs
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Defaulting Seed!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-sfhjta
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Generated Seed - 18579190
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-adqqcw
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Generated Seed - 31616222
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-zpsukc
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Defaulting Seed!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-swquil
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Defaulting Seed!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-diuksu
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Defaulting Seed!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-qnefhr
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Generated Seed - 161345717
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-konlok
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Defaulting Seed!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-qhibuw
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Generated Seed - 167812022
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-omggqx
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Generated Seed - 1412661623
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-fyyhbx
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Generated Seed - 524247123
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-vpqxzi
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Defaulting Seed!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-vxfhcf
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Generated Seed - 21235725
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-achlxa
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Generated Seed - 2711230
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-sbojll
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Generated Seed - 1811491111
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-zlymjh
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Defaulting Seed!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-ynmojs
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Defaulting Seed!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-dwpyka
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Defaulting Seed!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-pvczvl
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Defaulting Seed!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-oonaql
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Defaulting Seed!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-divvho
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Generated Seed - 382121714
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-gxmcdb
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Generated Seed - 62312231
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
+Platform assembly: C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Liam\Documents\unity_docs\alexander-calder-mobiles\Builds\test_Data\Managed\System.dll (this message is harmless)
+Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes. (Filename:  Line: 67)
+Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes. (Filename:  Line: 67)
+Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes. (Filename:  Line: 67)
+Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes. (Filename:  Line: 67)
+Serialization depth limit exceeded at 'Node'. There may be an object composition cycle in one or more of your serialized classes. (Filename:  Line: 67)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 14e8 -> priority: 1 
+  Thread -> id: 3b2c -> priority: 1 
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+udlvjt (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -849670301 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+tljrna (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -870974605 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+ecvqtr (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1308366825 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+fxsaze (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1260448309 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+uqjjmj (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -837735559 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+vvhrbw (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -804541025 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+gtosly (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1235615522 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+tqyduh (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -865923365 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+kbqjrr (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1137671184 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+rjvrka (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -929722550 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+bjqvjx (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1387934085 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+sfowry (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -904990974 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+wtbdyn (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -777950412 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+wetcbh (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -791268669 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+mifgkq (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1074279037 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+ktqksf (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1121046826 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+cjqocl (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1359311890 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+pmevsv (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -984712623 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+onpolc (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1012097515 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+rawdzg (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -938017431 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+kmlwro (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1127648918 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+hofgaf (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1211883987 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 0 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1338944932 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1338944932 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1338944932 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1338944932 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 202749773 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 2374 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.45.50.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 2086969790 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.47.08.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1656673826 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.47.27.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.47.34.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -107349853 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.47.52.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 80818412 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.48.36.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1061872542 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.49.10.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 2546034 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.49.40.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 74347043 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.50.02.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.50.09.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1905184497 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1905184497 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.51.04.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 2043294249 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.51.28.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1562319712 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.52.18.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 357085956 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.52.30.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - -1939637313 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.52.48.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 78333 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.53.15.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.53.18.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Font size and style overrides are only supported for dynamic fonts. (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Generated Seed - 2017202133 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+Took Screenshot! - C:/Users/Liam/Documents/unity_docs/alexander-calder-mobiles/Builds/screenshots/2015-09-28_19.53.29.png (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
